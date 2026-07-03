@@ -6,11 +6,10 @@ public class App {
 
     public static void main(String[] args) {
         AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext("org.example");
-        Table table = context.getBean("table", Table.class);
-        table.OpenBook();
-
-        Bookshelf bookshelf = context.getBean("bookshelf", Bookshelf.class);
-        System.out.println(bookshelf.getBookList());
-        System.out.println(bookshelf.getBookMap());
+        Book book1 = context.getBean("book1", Book.class);
+        Book book2 = context.getBean("book2", Book.class);
+        System.out.println("book1 и book2 равны? :" + (book1 == book2));
+        System.out.println(book1);
+        System.out.println(book2);
     }
 }
