@@ -6,11 +6,10 @@ public class App {
 
     public static void main(String[] args) {
         AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext("org.example");
-        Table table = context.getBean("table", Table.class);
-        table.OpenBook();
+        Book book = context.getBean("book1", Book.class);
 
-        Bookshelf bookshelf = context.getBean("bookshelf", Bookshelf.class);
-        System.out.println(bookshelf.getBookList());
-        System.out.println(bookshelf.getBookMap());
+        book.open();
+        context.close();
+        System.out.println("Программа завершена");
     }
 }
