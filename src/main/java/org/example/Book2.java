@@ -2,7 +2,7 @@ package org.example;
 
 import org.springframework.stereotype.Component;
 
-//@Component
+@Component
 public class Book2 implements Book {
 
     public Book2() {

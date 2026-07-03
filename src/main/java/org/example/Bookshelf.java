@@ -3,22 +3,25 @@ package org.example;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import java.util.List;
+import java.util.Map;
+
 @Component
 public class Bookshelf {
-    private Book book;
+    private final List<Book> bookList;
+    private final Map<String, Book> bookMap;
 
     @Autowired
-    public Bookshelf(Book book){
-        this.book = book;
-        System.out.println("Bookshelf been is created");
+    public Bookshelf(List<Book> bookList, Map<String, Book> bookMap){
+        this.bookList = bookList;
+        this.bookMap = bookMap;
     }
 
-    public void setBook(Book book){
-        System.out.println("Bookshelf been: set value to book field");
+    public List<Book> getBookList() {
+        return bookList;
     }
 
-    public void OpenBook() {
-        System.out.println("The book is opening...");
-        book.open();
+    public Map<String, Book> getBookMap() {
+        return bookMap;
     }
 }
