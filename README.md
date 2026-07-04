@@ -1,33 +1,40 @@
-# 🌱 Spring Core Learning Project
+# 🌱 Spring Framework Study Project
 
-Добро пожаловать в учебный проект для изучения основ **Spring Framework** — **Inversion of Control (IoC)** и **Dependency Injection (DI)**.
+![Java](https://img.shields.io/badge/Java-17+-blue)
+![Spring](https://img.shields.io/badge/Spring-5.3+-green)
+![Maven](https://img.shields.io/badge/Maven-3.8+-orange)
+![License](https://img.shields.io/badge/License-MIT-yellow)
 
-Проект содержит минимальные, но показательные примеры, которые помогут понять, как Spring управляет созданием объектов и связывает их между собой.
+Учебный проект для изучения основ Spring Framework (IoC, DI, Configuration, Property Injection).
 
----
+## 📚 О проекте
 
-## 📚 Оглавление
+Этот проект демонстрирует базовые концепции Spring Framework:
+- **Inversion of Control (IoC)** — управление жизненным циклом бинов
+- **Dependency Injection (DI)** — внедрение зависимостей
+- **Java-based Configuration** — конфигурация через `@Configuration`
+- **Property Injection** — чтение свойств из `application.properties`
+- **Component Scanning** — автоматическое обнаружение бинов
 
-- [О проекте](#-о-проекте)
-- [Структура проекта](#-структура-проекта)
+Проект представляет собой простое приложение, которое подключается к базе данных (симуляция) и выполняет SQL-запросы, используя настройки из внешнего файла свойств.
 
----
+## 🛠️ Технологии
 
-## 🎯 О проекте
+- **Java 17+** — основной язык программирования
+- **Spring Framework (Context)** — IoC контейнер
+- **Maven** — система сборки
+- **JUnit 5** — для тестирования
 
-В этом репозитории вы найдёте пример, демонстрирующий:
+## 🚀 Быстрый старт
 
-- Использование аннотаций `@Component`, `@Autowired`.
-- Создание и настройку Spring-контейнера.
-- Внедрение зависимостей через конструктор.
-- Автоматическое построение графа зависимостей (например, `Bookshelf` → `Book`).
+### Предварительные требования
 
+- JDK 17 или выше
+- Maven 3.8+ или Gradle 7.0+
+- Git (опционально)
 
-## 📂 Структура проекта
+### Клонирование репозитория
 
-```text
-src/main/java/org/example/
-├── App.java          # Точка входа – создаёт контекст и запускает приложение
-├── Book.java         # Интерфейс, описывающий книгу
-├── Book1.java        # Реализация Book, помеченная как @Component
-└── Bookshelf.java    # Компонент, зависящий от Book (внедрение через конструктор)
+```bash
+git clone https://github.com/NightmareWho/SpringCourse.git
+cd SpringCourse
