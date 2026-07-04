@@ -1,16 +1,13 @@
 package org.example;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.stereotype.Component;
-
-@Component
+//@Component
 public class Table {
     private Book book;
+    private Pen pen;
 
-    @Autowired
-    public Table(@Qualifier("book1") Book book){
+    public Table(Book book, Pen pen){
         this.book = book;
+        this.pen = pen;
         System.out.println("Table been is created");
     }
 
@@ -18,4 +15,9 @@ public class Table {
         System.out.println("The book is opening...");
         book.open();
     }
+
+    public void lookAtPen(){
+        System.out.println("Pen's name is " + pen.getMark());
+    }
+
 }
